@@ -207,11 +207,11 @@ export default class SortableList extends Component {
           ref={this._onRefScrollView}
           horizontal={horizontal}
           contentContainerStyle={contentContainerStyle}
-          scrollEventThrottle={2}
+          scrollEventThrottle={this.props.scrollEventThrottle}
           scrollEnabled={scrollEnabled}
           showsHorizontalScrollIndicator={showsHorizontalScrollIndicator}
           showsVerticalScrollIndicator={showsVerticalScrollIndicator}
-          onScroll={this._onScroll}>
+          onScroll={this.props.onScroll}>
           {this._renderHeader()}
           <View style={innerContainerStyle}>
             {this._renderRows()}
